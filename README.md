@@ -10,12 +10,12 @@ Requirements
 Quick Start
 -----------
 
-  Raspberry Pi
+### Raspberry Pi
 
   * connect a LED to gpio, GPIO23 & Ground.
   * connect a buzzer to gpio, GPIO24 & Ground.
 
-  Start
+### Start
 
     # cd /path/to/rpipat
     # gem install bundler --no-rdoc --no-ri
@@ -25,5 +25,5 @@ Quick Start
 Remarks
 -------
 
-  This contains Twitter Boostrap library.
+This contains Twitter Boostrap library.
 
