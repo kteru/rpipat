@@ -1,0 +1,47 @@
+<h3>RPiPat</h3>
+
+<p>
+  <form action="/" method="post">
+    <div class="btn-group">
+      <% if @val['accept'] %>
+      <button type="submit" class="btn btn-info btn-xs active" name="switch" value="a_on">アラート受付</button>
+      <button type="submit" class="btn btn-default btn-xs" name="switch" value="a_off">アラート無視</button>
+      <% else %>
+      <button type="submit" class="btn btn-default btn-xs" name="switch" value="a_on">アラート受付</button>
+      <button type="submit" class="btn btn-info btn-xs active" name="switch" value="a_off">アラート無視</button>
+      <% end %>
+    </div>
+  </form>
+</p>
+
+<p>
+  <% if @val['led'] > 0 %>
+  <span class="lead text-danger"><i class="glyphicon glyphicon-certificate"></i></span>
+  <% else %>
+  <span class="lead text-muted"><i class="glyphicon glyphicon-certificate"></i></span>
+  <% end %>
+
+  <% if @val['buz'] > 0 %>
+  <span class="lead text-danger"><i class="glyphicon glyphicon-volume-up"></i></span>
+  <% else %>
+  <span class="lead text-muted"><i class="glyphicon glyphicon-volume-up"></i></span>
+  <% end %>
+
+  <% if @val['led'] > 0 || @val['buz'] > 0 %>
+  <span class="lead text-danger">動作中</i></span>
+  <% else %>
+  <span class="lead text-muted">停止中</span>
+  <% end %>
+
+  <span class="lead"><a href="/"><i class="glyphicon glyphicon-refresh"></i></a></span>
+</p>
+
+<p>
+  <form action="/" method="post">
+    <div class="btn-group">
+      <button type="submit" class="btn btn-default btn-lg" name="switch" value="on">鳴らす</button>
+      <button type="submit" class="btn btn-default btn-lg" name="switch" value="off">止める</button>
+    </div>
+  </form>
+</p>
+
