@@ -22,6 +22,15 @@ Quick Start
     # bundle install --path vendor/bundle
     # bundle exec ruby app.rb -e production -p 10000 -o 0.0.0.0 -s Puma
 
+Usage
+-----
+
+  * nagios
+
+Edit `.forward` for delivering to curl
+
+    "| curl -kLs -m 5 -H 'Content-Type: application/octet-stream' --data-binary @- http://example.com:10000/nagios"
+
 Remarks
 -------
 
